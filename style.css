@@ -2,225 +2,135 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 body {
-    background-color: #0f172a;
-    color: #f8fafc;
+    background-color: #0b0f12; /* Deep Black Background */
+    color: #ffffff; /* Clean White Text */
     line-height: 1.6;
 }
 
-/* Header */
+/* Header & Navigation */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 8%;
-    background-color: #1e293b;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background-color: #12181f; /* Dark Panel Background */
+    border-bottom: 1px solid #1e293b;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: #38bdf8;
+    font-size: 26px;
+    font-weight: 800;
+    color: #00D26A; /* Funngro Green */
+    letter-spacing: -0.5px;
 }
 
-.logo span {
-    color: #f8fafc;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
-}
-
-nav ul li {
-    margin-left: 25px;
-}
-
-nav ul li a {
-    color: #cbd5e1;
+nav a {
+    color: #ffffff;
     text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.2s ease;
 }
 
-nav ul li a:hover {
-    color: #38bdf8;
-}
-
-.btn-nav {
-    background: #38bdf8;
-    color: #0f172a !important;
-    padding: 8px 18px;
-    border-radius: 20px;
-    font-weight: 600 !important;
+nav a.active, nav a:hover {
+    color: #00D26A; /* Funngro Green Hover */
 }
 
 /* Hero Section */
 .hero {
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-    padding: 0 10%;
-    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-}
-
-.badge {
-    background: rgba(56, 189, 248, 0.1);
-    color: #38bdf8;
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
+    padding: 90px 20px;
+    background: radial-gradient(circle at top, #16221d 0%, #0b0f12 70%);
 }
 
 .hero h1 {
-    font-size: 48px;
-    margin: 20px 0;
-}
-
-.highlight {
-    color: #38bdf8;
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 18px;
+    color: #ffffff;
 }
 
 .hero p {
     font-size: 18px;
-    color: #94a3b8;
+    color: #d1d5db; /* Soft White/Light Gray */
     max-width: 650px;
-    margin: 0 auto 30px;
+    margin: 0 auto 30px auto;
 }
 
-.cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
+/* Green Buttons */
 .btn {
-    padding: 12px 28px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: 0.3s;
+    background-color: #00D26A; /* Funngro Bright Green */
+    color: #000000; /* Black Text on Green Button for High Contrast */
+    border: none;
+    padding: 14px 36px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 30px; /* Rounded Pill-Style Button */
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.primary-btn {
-    background-color: #38bdf8;
-    color: #0f172a;
+.btn:hover {
+    background-color: #00b85c;
+    transform: translateY(-2px);
 }
 
-.primary-btn:hover {
-    background-color: #0284c7;
-}
-
-.secondary-btn {
-    border: 2px solid #38bdf8;
-    color: #38bdf8;
-}
-
-.secondary-btn:hover {
-    background-color: rgba(56, 189, 248, 0.1);
-}
-
-/* Sections General */
-section {
-    padding: 80px 10%;
+/* Features Section */
+.features {
+    padding: 70px 20px;
     text-align: center;
 }
 
-section h2 {
+.features h2 {
     font-size: 32px;
-    margin-bottom: 40px;
-    color: #38bdf8;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 45px;
 }
 
-/* About */
-.about-card {
-    background: #1e293b;
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #12181f; /* Dark Card Surface */
     padding: 30px;
-    border-radius: 12px;
-    max-width: 800px;
-    margin: 0 auto;
-    border: 1px solid #334155;
-    font-size: 18px;
-    color: #cbd5e1;
+    border-radius: 16px;
+    width: 310px;
+    text-align: left;
+    border: 1px solid #1e2d24; /* Subtle Greenish Border */
+    transition: border-color 0.2s ease;
 }
 
-/* Skills & Services */
-.skills-grid, .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+.card:hover {
+    border-color: #00D26A;
 }
 
-.skill-card, .service-box {
-    background: #1e293b;
-    padding: 30px;
-    border-radius: 12px;
-    border: 1px solid #334155;
-    transition: transform 0.3s;
-}
-
-.skill-card:hover, .service-box:hover {
-    transform: translateY(-5px);
-    border-color: #38bdf8;
-}
-
-.skill-card h3, .service-box h3 {
+.card h3 {
+    color: #00D26A; /* Funngro Green Heading */
+    font-size: 20px;
     margin-bottom: 12px;
-    color: #f8fafc;
 }
 
-.skill-card p, .service-box p {
-    color: #94a3b8;
-    font-size: 14px;
+.card p {
+    color: #d1d5db;
+    font-size: 15px;
 }
 
 /* Footer */
 footer {
-    background: #020617;
-    padding: 50px 10% 20px;
     text-align: center;
-    border-top: 1px solid #1e293b;
-}
-
-footer h2 {
-    color: #f8fafc;
-    margin-bottom: 10px;
-}
-
-footer p {
-    color: #94a3b8;
-}
-
-.footer-rights {
-    margin-top: 40px;
-    font-size: 13px;
-    color: #64748b;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .hero h1 {
-        font-size: 36px;
-    }
-    nav ul {
-        gap: 10px;
-    }
-    nav ul li {
-        margin-left: 0;
-    }
+    padding: 25px;
+    background-color: #070a0d;
+    color: #9ca3af;
+    font-size: 14px;
+    border-top: 1px solid #12181f;
 }
